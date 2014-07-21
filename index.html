@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/jquery.ui.min.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+<!-- <div id="overlay"></div> -->
+    <div class="row">
+        <div class="container">
+        <h2>
+            Mason's To-Do List
+        </h2>
+
+        <div class="row action-area">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="add-task">
+                    <form id="todo-form">
+                        <div class="calendar-wrapper">
+                            <input type="text" id="title" placeholder="Add an item" />
+                            <input type="text" id="calendar" placeholder="Due date" />
+                            <!-- <a class="icon-calendar"></a> -->
+                        </div>
+
+                        <input type="text" placeholder="Descrtipion" id="description">
+                        
+                        <input type="button" id="addItem" class="btn btn-default" value="Add Task"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">  
+            <div class="col-md-4">
+                <div class="task-list task-container" id="pending">
+                    <div>
+                        <h3>Pending</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="task-list task-container col-md-4" id="inProgress">
+                    <div>
+                        <h3>In Progress</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="task-list task-container col-md-4" id="completed">
+                    <div>
+                        <h3>Completed</h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="row delete-area">
+            <div>
+                <a class="icon-trash" id="clear"><span>Clear all</span></a>
+                <div id="delete-div">Drop your item here</div>
+            </div>
+        </div>
+        
+        
+        <!-- <div class="task-list">
+            
+        </div> -->
+    </div>
+    </div>
+        <!--
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <script src="js/vendor/jquery.ui.min.js"></script>
+        <script src="js/jquery.progressTimer.js"></script> 
+        <script src="js/main.js"></script>
+        <script src="js/advanced.js"></script>
+
+        <script type="text/javascript">
+                $("#calendar").datepicker();
+                $("#calendar").datepicker("option", "dateFormat", "dd/mm/yy");
+
+                $(".task-container").droppable();
+                $(".todo-task").draggable({ revert: "valid", revertDuration:200 });
+
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            // e.src='//www.google-analytics.com/analytics.js';
+            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            // ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

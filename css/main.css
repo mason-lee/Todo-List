@@ -1,0 +1,557 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?-od9w1m');
+  src:url('fonts/icomoon.eot?#iefix-od9w1m') format('embedded-opentype'),
+    url('fonts/icomoon.woff?-od9w1m') format('woff'),
+    url('fonts/icomoon.ttf?-od9w1m') format('truetype'),
+    url('fonts/icomoon.svg?-od9w1m#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-trash:before {
+  content: "\e601";
+}
+.icon-calendar:before {
+  content: "\e600";
+}
+
+
+.task-list {
+  width: 100%;
+  float: left;
+  /*margin: 0 5px;*/
+  /*background-color: #e3e3e3;*/
+  border: 1px solid #dadada;
+  min-height: 240px;
+  /*border-radius: 10px;*/
+  padding-bottom: 15px;
+}
+ 
+.add-task input {
+  border: none;
+}
+
+textarea:focus, input[type="text"]:focus {
+  outline: none;
+}
+
+.calendar-wrapper {
+  /*border: 1px solid gray;*/
+}
+#title {
+  width: 100%;
+}
+
+#calendar {
+  width: 20%;
+  /*float: right;*/
+}
+
+#description {
+  width: 100%;
+  /*border: 1px solid gray;*/
+}
+
+.icon-calendar {
+  font-size: 22px;
+  display: block;
+  /*position: absolute;
+  right: 21px;
+  top: 4px;*/
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.icon-trash {
+  font-size: 17px;
+  float: right;
+  margin-right: 13px;
+  margin-top: 15px;
+}
+
+.icon-trash>span {
+  font-size: 16px;
+  margin-left: 6px;
+}
+
+.add-task input {
+  height: 30px;
+}
+
+.btn-default {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border: 1px solid #5bc0de !important;
+  color: #5bc0de;
+}
+.todo-task {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+}
+ 
+.add-task input[type="button"] {
+  width: 100px;
+  margin: 5px;
+}
+ 
+.todo-task > .task-header {
+  font-weight: bold;
+}
+ 
+.todo-task > .task-date {
+  font-size: small;
+  font-style: italic;
+}
+ 
+.todo-task > .task-description {
+  font-size: smaller;
+}
+ 
+h2 {
+  text-align: center;
+  font-weight: 500;
+}
+
+h3 {
+  text-align: center;
+}
+
+.col-md-4 {
+  padding-left: 0;
+}
+
+.col-md-4:last-child {
+  padding-right: 0;
+}
+
+.delete-area {
+  margin-top: 15px;
+}
+#delete-div {
+  border: 1px solid #dadada;
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  color: #dadada;
+  /*width: 16px;
+  height: 22px;
+  float: right;
+  position: absolute;
+  right: 71px;*/
+}
+
+.action-area {
+  margin-bottom: 100px;
+}
+
+body>.row {
+  margin-bottom: 5em;
+}
+
+.task-list>div h5 {
+  text-align: center;
+  color: gray;
+}
+
+.todo-edit {
+    background-color: #f7f7f7;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    min-height: 20px;
+    padding: 8px 12px 12px;
+    width: 546px;
+}
+
+.box {
+    width: 50px;
+    height: 20px;
+}
+
+.red {
+    background-color: red;
+}
+
+.red-box-selection {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+}
+
+.edit-option {
+    position: absolute;
+    top: 2;
+    width: 500px;
+    height: 100px;
+    background-color: red;
+    z-index: 99;
+}
+
+.card-label {   
+    border-radius: 3px;
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 4px 4px 0;
+    min-width: 30px;
+    padding: 5px 10px;
+    width: auto;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .col-md-4 {
+    padding-left: 15px !important;
+  }
+
+  .col-md-4:last-child {
+    padding-right: 15px;
+  }
+
+  .row {
+    margin: 0 -10px;
+  }
+
+  .task-list {
+    margin-bottom: 15px;
+  }
+
+  .action-area {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
